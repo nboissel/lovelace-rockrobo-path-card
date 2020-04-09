@@ -101,8 +101,8 @@ class RockroboPathCard extends HTMLElement {
 
       const vacuumImage = document.createElementNS(ns, 'image');
       vacuumImage.setAttributeNS('http://www.w3.org/1999/xlink', 'href', vacuumLink);
-      vacuumImage.setAttributeNS(null, 'x', Math.round(robotPosition[0] / 10.0));
-      vacuumImage.setAttributeNS(null, 'y', Math.round(robotPosition[1] / 10.0));
+      vacuumImage.setAttributeNS(null, 'x', Math.round(robotPosition[0] / 10.0) - this._config.vacuum_scale * 10);
+      vacuumImage.setAttributeNS(null, 'y', Math.round(robotPosition[1] / 10.0) - this._config.vacuum_scale * 10);
       vacuumImage.setAttributeNS(null, 'transform', `rotate(${robotAngle}deg)`);
       vacuumImage.setAttributeNS(null, 'width', `${this._config.vacuum_scale}vw`);
       vacuumImage.setAttributeNS(null, 'height', `${this._config.vacuum_scale}vw`);

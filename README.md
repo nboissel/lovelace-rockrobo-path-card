@@ -10,7 +10,7 @@ The result is produced in SVG to allow clean integration in picture-elements car
 Add the `rockrobo-path-card.js` file in your module folder (e.g. `/www/modules/`) then add the import in `ui-lovelace.yaml` configuration:
 ```yaml
 resources:
-  - url: /local/modules/rockrobo-path-card.js?v=1.0.0
+  - url: /local/modules/rockrobo-path-card.js?v=1.0.1
     type: module
 ```
 
@@ -60,7 +60,7 @@ It's highly recommended to exclude the sensor from recorder to keep database sma
 recorder:
   exclude:
     entities:
-      - sensor.xiaomi_map
+      - sensor.vacuum_map
 ```
 
 ## Options
